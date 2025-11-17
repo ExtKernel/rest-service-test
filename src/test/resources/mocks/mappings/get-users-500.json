@@ -1,0 +1,21 @@
+{
+  "priority": 10,
+  "request": {
+    "method": "GET",
+    "urlPath": "/users",
+    "queryParameters": {
+      "trigger": {
+        "equalTo": "error"
+      }
+    }
+  },
+  "response": {
+    "status": 500,
+    "jsonBody": {
+      "error": "Internal server error"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

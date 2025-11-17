@@ -1,0 +1,21 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "GET",
+    "urlPath": "/users",
+    "queryParameters": {
+      "gender": {
+        "equalTo": "unknown"
+      }
+    }
+  },
+  "response": {
+    "status": 422,
+    "jsonBody": {
+      "error": "Invalid gender value"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/users",
+    "queryParameters": {
+      "age": {
+        "equalTo": "-1"
+      }
+    }
+  },
+  "response": {
+    "status": 400,
+    "jsonBody": {
+      "error": "Invalid age parameter"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
