@@ -18,7 +18,7 @@ public class OrmDbManager {
                   id INTEGER PRIMARY KEY AUTOINCREMENT,
                   test_name TEXT NOT NULL,
                   status TEXT NOT NULL,
-                  createdAt TEXT NOT NULL
+                  execution_time TEXT NOT NULL
                 )
             """);
         });
@@ -32,7 +32,7 @@ public class OrmDbManager {
             TestResult result = new TestResult();
             result.setTestName(testName);
             result.setStatus(status);
-            result.setCreatedAt(System.currentTimeMillis());
+            result.setExecutionTime(LocalDateTime.now());
 
             if (existing == null) {
                 dao.insert(result);

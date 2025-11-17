@@ -13,15 +13,15 @@ public interface TestResultDao {
     TestResult findByName(String testName);
 
     @SqlUpdate("""
-        INSERT INTO test_results(test_name, status, createdAt)
-        VALUES (:testName, :status, :createdAt)
+        INSERT INTO test_results(test_name, status, execution_time)
+        VALUES (:testName, :status, :executionTime)
     """)
     void insert(@BindBean TestResult result);
 
     @SqlUpdate("""
         UPDATE test_results
         SET   status = :status,
-              createdAt = :createdAt
+              execution_time = :executionTime
         WHERE test_name = :testName
     """)
     void update(@BindBean TestResult result);
